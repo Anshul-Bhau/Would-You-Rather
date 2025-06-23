@@ -101,24 +101,24 @@
 
 @keyframes majority_expand {
     to {
-        width: 70%;
+        width: 55%;
 
     }
 }
 
 .animate_expand {
-    animation: majority_expand 0.5s linear;
+    animation: majority_expand 0.4s linear;
     animation-fill-mode: both;
 }
 
 @keyframes minority_contract {
     to {
-        width: 30%;
+        width: 43%;
     }
 }
 
 .animate_contract {
-    animation: minority_contract 0.5s linear;
+    animation: minority_contract 0.4s linear;
     animation-fill-mode: both;
 }
 
@@ -137,24 +137,24 @@
 
     @keyframes majority_expand_phone {
         to {
-            height: 70%;
+            height: 55%;
 
         }
     }
 
     @keyframes minority_contract_phone {
         to {
-            height: 30%;
+            height: 43%;
         }
     }
 
     .animate_expand {
-        animation: majority_expand_phone 0.5s linear;
+        animation: majority_expand_phone 0.4s linear;
         animation-fill-mode: both;
     }
 
     .animate_contract {
-        animation: minority_contract_phone 0.5s linear;
+        animation: minority_contract_phone 0.4s linear;
         animation-fill-mode: both;
     }
 
