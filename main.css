@@ -1,13 +1,15 @@
-.main{
+.main {
     display: none;
 }
-.game{
+
+.game {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
     background-color: black;
 }
+
 .red {
     position: relative;
     background: linear-gradient(to top left, #ff5933, #ff0053);
@@ -23,10 +25,10 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    
-  }
-  
-  .options {
+
+}
+
+.options {
     font-family: Poppins;
     position: absolute;
     top: 1rem;
@@ -35,27 +37,28 @@
     gap: 1rem;
     align-items: center;
     z-index: 2;
-    height: 10% ;
+    height: 10%;
     width: fit-content;
-  }
-  
-  .streak {
-    height: 100% ;
+}
+
+.streak {
+    height: 100%;
     width: fit-content;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 1.2rem;
     color: white;
-  }
-  .streak img {
-    width: 1.5rem;       
+}
+
+.streak img {
+    width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
-    display: block; 
-  }
-  
-  .skip {
+    display: block;
+}
+
+.skip {
     transform: scale(1);
     background-color: rgba(255, 255, 255, 0.312);
     color: white;
@@ -64,83 +67,95 @@
     font-size: 1rem;
     cursor: pointer;
     user-select: none;
-  }
-  .skip:hover{
+}
+
+.skip:hover {
     color: black;
     transform: scale(1.2);
-  }
-.blue{
+}
+
+.blue {
     background-color: #007dff;
     height: 100%;
     border: none;
-    background-image:     linear-gradient( to top left,#0087ff , #479aff );
+    background-image: linear-gradient(to top left, #0087ff, #479aff);
     color: white;
     width: 49%;
     border-radius: 2rem;
     font-family: Mogra;
-    font-size: max(2.5vw,2rem);
+    font-size: max(2.5vw, 2rem);
 }
 
-@keyframes gray_background {
-    to{
-        background-image:     linear-gradient( to top left, #545464 ,#343438 );
+/* @keyframes gray_background {
+    to {
+        background-image: linear-gradient(to top left, #545464, #343438);
+
+    }
+} */
+
+.animate_gray {
+    background: #3a3a3a;
+    transition: background 0.4s ease-in;
+}
+
+
+@keyframes majority_expand {
+    to {
+        width: 70%;
 
     }
 }
-.animate_gray{
-    animation: gray_background 0.2s linear;
+
+.animate_expand {
+    animation: majority_expand 0.5s linear;
     animation-fill-mode: both;
 }
-@keyframes majority_expand {
-    to{
-        width:70%;
 
+@keyframes minority_contract {
+    to {
+        width: 30%;
     }
 }
-.animate_expand{
-    animation: majority_expand 0.5s linear ;
-    animation-fill-mode:both;
-}
 
-@keyframes  minority_contract {
-    to{
-        width:30%;
-    }
-}
-.animate_contract{
-    animation: minority_contract 0.5s linear ;
-    animation-fill-mode:both;
+.animate_contract {
+    animation: minority_contract 0.5s linear;
+    animation-fill-mode: both;
 }
 
 
 @media (max-width:500px) {
-    .game{
-       flex-direction: column;
-       
+    .game {
+        flex-direction: column;
+
     }
-    .blue, .red{
-      height: 49%;
-      width:99%;
+
+    .blue,
+    .red {
+        height: 49%;
+        width: 99%;
     }
+
     @keyframes majority_expand_phone {
-        to{
-            height:70%;
-    
+        to {
+            height: 70%;
+
         }
     }
-   
-    @keyframes  minority_contract_phone {
-        to{
-            height:30%;
+
+    @keyframes minority_contract_phone {
+        to {
+            height: 30%;
         }
     }
-    .animate_expand{
-        animation: majority_expand_phone 0.5s linear ;
-        animation-fill-mode:both;
+
+    .animate_expand {
+        animation: majority_expand_phone 0.5s linear;
+        animation-fill-mode: both;
     }
-    .animate_contract{
-        animation: minority_contract_phone 0.5s linear ;
-        animation-fill-mode:both;
+
+    .animate_contract {
+        animation: minority_contract_phone 0.5s linear;
+        animation-fill-mode: both;
     }
-    
+
 }

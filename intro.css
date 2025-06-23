@@ -1,10 +1,10 @@
-
-.intro{
+.intro {
+    display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .box1 {
+.box1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -12,9 +12,9 @@
     width: 100vw;
     background-image: linear-gradient(to bottom right, #ff1a1a 11%, #1a8cff);
     z-index: 1;
-  }
-  
-  .box2 {
+}
+
+.box2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,9 +23,9 @@
     background-image: linear-gradient(to top left, #ff1a1a 11%, #1a8cff);
     animation: gradientFlow 3s ease infinite;
     z-index: 2;
-  }
-  
-  .master {
+}
+
+.master {
     position: absolute;
     top: 25vh;
     left: 25vw;
@@ -38,43 +38,49 @@
     flex-direction: column;
     justify-content: space-between;
     font-family: "Potta One";
-  }
-  
-@keyframes gradientFlow {
-  50%{
-   opacity: 0;
+}
 
-  }
- }
-.w{
-   color: #ff3a2c;
-   animation: change_blue 3s ease infinite ;
-}
-@keyframes change_blue {
-    50%{
-     color:#007dff;
-     
+@keyframes gradientFlow {
+    50% {
+        opacity: 0;
+
     }
-   }
-.you{
-    align-self: center;
-    color:purple;
-  
- 
 }
-.r{
+
+.w {
+    color: #ff3a2c;
+    animation: change_blue 3s ease infinite;
+}
+
+@keyframes change_blue {
+    50% {
+        color: #007dff;
+
+    }
+}
+
+.you {
+    align-self: center;
+    color: purple;
+
+
+}
+
+.r {
     align-self: self-end;
     color: #007dff;
-   animation: change_red 3s ease infinite ;
+    animation: change_red 3s ease infinite;
 }
+
 @keyframes change_red {
-    50%{
-     color:#ff3a2c;
-     
+    50% {
+        color: #ff3a2c;
+
     }
-   }
-   @media (max-width:600px) {
-     .master{
-        width:90vw;
-     }
-   }
+}
+
+@media (max-width:600px) {
+    .master {
+        width: 90vw;
+    }
+}
