@@ -1,0 +1,187 @@
+@font-face {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    src: url(ttf/blinkmacsystemfont-black.ttf);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main {
+    display: none;
+}
+
+.game {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.red {
+    position: relative;
+    background: linear-gradient(to top left, #ff5933, #ff0053);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    width: 49%;
+    height: 100%;
+    /* font-family: Mogra; */
+    font-size: max(2.5vw, 2rem);
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.options {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    z-index: 2;
+    height: 10%;
+    width: fit-content;
+}
+
+.streak {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.streak img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    display: block;
+}
+
+.skip {
+    /* transform: scale(1); */
+    background-color: rgba(255, 255, 255, 0.312);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.skip:hover {
+    color: black;
+    transform: scale(1.05);
+}
+
+.blue {
+    background-color: #007dff;
+    height: 100%;
+    border: none;
+    background-image: linear-gradient(to top left, #0087ff, #479aff);
+    color: white;
+    width: 49%;
+    border-radius: 2rem;
+    /* font-family: Mogra; */
+    font-size: max(2.5vw, 2rem);
+    font-weight: 700;
+}
+
+/* @keyframes gray_background {
+    to {
+        background-image: linear-gradient(to top left, #545464, #343438);
+
+    }
+} */
+
+.percentage {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.red-percent {
+    color: #ffdddd;
+}
+.blue-percent {
+    color: #ddeeff;
+}
+
+
+.animate_gray {
+    background: #3a3a3a;
+    transition: background 0.4s ease-in;
+}
+
+
+@keyframes majority_expand {
+    to {
+        width: 70%;
+
+    }
+}
+
+.animate_expand {
+    animation: majority_expand 0.5s linear;
+    animation-fill-mode: both;
+}
+
+@keyframes minority_contract {
+    to {
+        width: 30%;
+    }
+}
+
+.animate_contract {
+    animation: minority_contract 0.5s linear;
+    animation-fill-mode: both;
+}
+
+
+@media (max-width:500px) {
+    .game {
+        flex-direction: column;
+
+    }
+
+    .blue,
+    .red {
+        height: 49%;
+        width: 99%;
+    }
+
+    @keyframes majority_expand_phone {
+        to {
+            height: 70%;
+
+        }
+    }
+
+    @keyframes minority_contract_phone {
+        to {
+            height: 30%;
+        }
+    }
+
+    .animate_expand {
+        animation: majority_expand_phone 0.5s linear;
+        animation-fill-mode: both;
+    }
+
+    .animate_contract {
+        animation: minority_contract_phone 0.5s linear;
+        animation-fill-mode: both;
+    }
+
+}
